@@ -6,7 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     // Object Components
     private Rigidbody2D rigidBody;
-    public Animator animator;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
 
     // Movement Vars
     [SerializeField] float playerSpeed;
@@ -21,15 +22,21 @@ public class PlayerController : MonoBehaviour
     // Anim Vars
     private string currentAnimaton;
 
-    //Animation States
+    // Animation States
     const string PLAYER_IDLE = "Idle";
     const string PLAYER_RUN = "Run";
     const string PLAYER_JUMP = "Jump";
+    const string PLAYER_FALL = "Fall";
+
+    // Collider Tags
+    const string waterCollider = "Water";
+    const string squareMaceCollider = "SquareMace";
 
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         groundMask = 1 << LayerMask.NameToLayer("Ground");
     }
 
@@ -61,6 +68,9 @@ public class PlayerController : MonoBehaviour
         // Initializes Player jump vector and animation
         PlayerJump();
 
+        // Initializes Player fall animation
+        PlayerFall();
+
         // Assign the new velocity to the rigidbody
         PlayerVelocity();
 
@@ -81,6 +91,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Plays correct grounded animation
     private void UpdateGroundedAnimations()
     {
         if (isGrounded)
@@ -96,13 +107,23 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Initializes Player jump vector and animation
     private void PlayerJump()
     {
         if (isJumpPressed && isGrounded)
         {
             rigidBody.AddForce(new Vector2(0, jumpForce));
             isJumpPressed = false;
-            ChangeAnimationState(PLAYER_JUMP);
+            ChangeAnimationState(PLAYER_JUMP);   
+        }
+    }
+
+    // Initializes Player fall animation
+    private void PlayerFall()
+    {
+        if (!isGrounded && rigidBody.velocity.y < 0)
+        {
+            ChangeAnimationState(PLAYER_FALL);
         }
     }
 
@@ -137,5 +158,34 @@ public class PlayerController : MonoBehaviour
 
         animator.Play(newAnimation);
         currentAnimaton = newAnimation;
+    }
+
+    // ================ Collision ===============
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        switch(collision.gameObject.tag)
+        {
+            case squareMaceCollider:
+                StartCoroutine(PlayerHurt());
+                break;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case waterCollider:
+                Debug.Log("Im Wet!");
+                break;
+        }
+    }
+
+    IEnumerator PlayerHurt()
+    {
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(1);
+        spriteRenderer.color = Color.white;
     }
 }
