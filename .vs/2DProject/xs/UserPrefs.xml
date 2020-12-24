@@ -1,12 +1,15 @@
 ﻿<Properties StartupConfiguration="{9F478B2A-144D-827E-BDBC-CD6D9B431814}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerScripts/PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MinerScripts/PlayerController.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerScripts/PlayerController.cs" Line="23" Column="1" />
+      <File FileName="Assets/Scripts/MinerScripts/PlayerController.cs" Line="16" Column="42" />
+      <File FileName="Assets/Scripts/Terrain/TerrainController.cs" />
+      <File FileName="Assets/Mining.cs" />
+      <File FileName="Assets/Scripts/Terrain/TileAutomata.cs" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="03cd3c10-a01b-4d62-8ed0-68a49a0ae167" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6ca64a83-b304-4433-96e8-867689cbb1a9" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -64,8 +64,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\PlayerScripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\PlayerScripts\PlayerGrounded.cs" />
+    <Compile Include="Assets\Mining.cs" />
+    <Compile Include="Assets\Scripts\MinerScripts\Collision.cs" />
+    <Compile Include="Assets\Scripts\MinerScripts\Movement.cs" />
+    <Compile Include="Assets\Scripts\MinerScripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\MinerScripts\UserInput.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\MainPlayerScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerCollision.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Terrain\TerrainController.cs" />
+    <Compile Include="Assets\Scripts\Terrain\TileAutomata.cs" />
     <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2019.4.11f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
