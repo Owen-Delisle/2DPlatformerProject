@@ -12,9 +12,12 @@ public class TerrainController : MonoBehaviour
 
     [SerializeField] public Tile topTile;
     [SerializeField] public Tile bottomTile;
+
     [SerializeField] public Tile goldTile;
     [SerializeField] public Tile diamondTile;
     [SerializeField] public Tile hoverTile;
+
+    [SerializeField] public Tile lavaTile;
 
     public int[,] terrainMap;
 

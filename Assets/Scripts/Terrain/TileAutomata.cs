@@ -54,15 +54,16 @@ public class TileAutomata : MonoBehaviour
         {
             for(int col = 0; col < height; col++)
             {
-                if(terrainController.terrainMap[row,col] == 1)
+                PlaceBottomTile(row, col);
+                if (terrainController.terrainMap[row,col] == 1)
                 {
-                    PlaceTile(row, col);
+                    PlaceTopTile(row, col);
                 }
             }
         }
     }
 
-    private void PlaceTile(int row, int col)
+    private void PlaceTopTile(int row, int col)
     {
         Tile tile;
         int goldChance = Random.Range(0, 300);
@@ -82,6 +83,21 @@ public class TileAutomata : MonoBehaviour
         }
 
         terrainController.topMap.SetTile(new Vector3Int(-row + width / 2, -col + height / 2, 0), tile);
+    }
+
+    private void PlaceBottomTile(int row, int col)
+    {
+        Tile tile;
+        int lavaChance = Random.Range(0, 1000);
+
+        RangeInt lavaRange = new RangeInt(0, 1);
+
+        tile = terrainController.bottomTile;
+        if (lavaChance >= lavaRange.start && lavaChance <= lavaRange.end)
+        {
+            tile = terrainController.lavaTile;
+        }
+        terrainController.bottomMap.SetTile(new Vector3Int(-row + width / 2, -col + height / 2, 0), tile);
     }
 
     private void ClearMap(bool complete)

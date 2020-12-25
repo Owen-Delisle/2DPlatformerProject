@@ -33,6 +33,11 @@ public class UserInput : MonoBehaviour
         {
             playerController.isMinePressed = true;
         }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            playerController.isPlacePressed = true;
+        }
     }
 
     private Vector3 GetMousePosition()

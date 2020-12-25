@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
 
     // Mining Vars
     public bool isMinePressed;
+    public bool isPlacePressed;
     public Vector3 mousePosition;
 
     // Grounded Vars
