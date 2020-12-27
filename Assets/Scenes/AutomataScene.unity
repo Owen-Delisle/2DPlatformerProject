@@ -469,12 +469,14 @@ MonoBehaviour:
   playerController: {fileID: 661061350}
   topMap: {fileID: 823704207}
   bottomMap: {fileID: 1155027438}
+  mapSize: {x: 0, y: 0, z: 0}
   topTile: {fileID: 11400000, guid: 50365644e740c42ff827575d00f475c1, type: 2}
   bottomTile: {fileID: 11400000, guid: 65c1f0f48366a4cbdbe8954e40356bc5, type: 2}
   goldTile: {fileID: 11400000, guid: ccc3f37afcf80405b86218a6deecfa5c, type: 2}
   diamondTile: {fileID: 11400000, guid: 6a11740118ee94784a528d804d31912f, type: 2}
   hoverTile: {fileID: 11400000, guid: 5777355acb4024cd7884e8098182ddd7, type: 2}
   lavaTile: {fileID: 11400000, guid: 8cefc2229e71f4fceac843ddeda03695, type: 2}
+  lavaSourceBlocks: []
 --- !u!1 &823704204
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,6 +806,7 @@ GameObject:
   - component: {fileID: 1944886786}
   - component: {fileID: 1944886787}
   - component: {fileID: 1944886788}
+  - component: {fileID: 1944886789}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -858,12 +861,27 @@ MonoBehaviour:
   playerController: {fileID: 0}
   topMap: {fileID: 823704207}
   bottomMap: {fileID: 1155027438}
+  mapSize: {x: 120, y: 70, z: 0}
   topTile: {fileID: 11400000, guid: 50365644e740c42ff827575d00f475c1, type: 2}
   bottomTile: {fileID: 11400000, guid: 65c1f0f48366a4cbdbe8954e40356bc5, type: 2}
   goldTile: {fileID: 11400000, guid: ccc3f37afcf80405b86218a6deecfa5c, type: 2}
   diamondTile: {fileID: 11400000, guid: 6a11740118ee94784a528d804d31912f, type: 2}
   hoverTile: {fileID: 11400000, guid: 5777355acb4024cd7884e8098182ddd7, type: 2}
   lavaTile: {fileID: 11400000, guid: 8cefc2229e71f4fceac843ddeda03695, type: 2}
+  lavaSourceBlocks: []
+--- !u!114 &1944886789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944886785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53d71442ff23948a383fd4c0270ce585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrainController: {fileID: 1944886788}
 --- !u!1 &2070893810
 GameObject:
   m_ObjectHideFlags: 3

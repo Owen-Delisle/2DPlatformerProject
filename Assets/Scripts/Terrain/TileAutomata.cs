@@ -25,19 +25,17 @@ public class TileAutomata : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Return))
         {
+            //terrainController.lavaSourceBlocks = new List<Vector3Int>();
+            terrainController.lavaSourceBlocks.Clear();
             RunSimulation(lifeCycles);
-        }
-        if(Input.GetKeyDown(KeyCode.Dollar))
-        {
-            ClearMap(true);
         }
     }
 
     private void RunSimulation(int lifeCycles)
     {
         ClearMap(true);
-        width = tileMapSize.x;
-        height = tileMapSize.y;
+        width = terrainController.mapSize.x;
+        height = terrainController.mapSize.y;
 
         if(terrainController.terrainMap == null)
         {
@@ -96,6 +94,7 @@ public class TileAutomata : MonoBehaviour
         if (lavaChance >= lavaRange.start && lavaChance <= lavaRange.end)
         {
             tile = terrainController.lavaTile;
+            terrainController.lavaSourceBlocks.Add(new Vector3Int(-row + width / 2, -col + height / 2, 0));
         }
         terrainController.bottomMap.SetTile(new Vector3Int(-row + width / 2, -col + height / 2, 0), tile);
     }
@@ -122,7 +121,7 @@ public class TileAutomata : MonoBehaviour
         }
     }
 
-    private int[,] GenerateTilePositions(int[,]tileMap)
+    private int[,] GenerateTilePositions(int[,] tileMap)
     {
         int[,] outputMap = new int[width, height];
         int neighbour;

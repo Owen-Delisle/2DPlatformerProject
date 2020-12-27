@@ -64,6 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\LavaSpawner.cs" />
     <Compile Include="Assets\Mining.cs" />
     <Compile Include="Assets\Scripts\MinerScripts\Collision.cs" />
     <Compile Include="Assets\Scripts\MinerScripts\Movement.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerCollision.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Terrain\Lava.cs" />
     <Compile Include="Assets\Scripts\Terrain\TerrainController.cs" />
     <Compile Include="Assets\Scripts\Terrain\TileAutomata.cs" />
     <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />

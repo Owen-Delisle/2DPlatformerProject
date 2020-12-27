@@ -124,7 +124,6 @@ public class Mining : MonoBehaviour
         {
             playerController.isMinePressed = false;
             topMap.SetTile(mouseTopCellPosition, null);
-            IsMouseNextToPlayer();
         }
     }
 

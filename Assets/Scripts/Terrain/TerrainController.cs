@@ -10,6 +10,8 @@ public class TerrainController : MonoBehaviour
     [SerializeField] public Tilemap topMap;
     [SerializeField] public Tilemap bottomMap;
 
+    [SerializeField] public Vector3Int mapSize;
+
     [SerializeField] public Tile topTile;
     [SerializeField] public Tile bottomTile;
 
@@ -20,6 +22,8 @@ public class TerrainController : MonoBehaviour
     [SerializeField] public Tile lavaTile;
 
     public int[,] terrainMap;
+
+    public List<Vector3Int> lavaSourceBlocks = new List<Vector3Int>();
 
     private void Start()
     {
