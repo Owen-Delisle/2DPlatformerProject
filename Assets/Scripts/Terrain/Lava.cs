@@ -27,7 +27,7 @@ public class Lava : MonoBehaviour
         width = -(terrainController.mapSize.x / 2);
 
         topTile = terrainController.topTile;
-        lavaTile = terrainController.lavaTile;
+        //lavaTile = terrainController.lavaTile;
     }
 
     // Update is called once per frame

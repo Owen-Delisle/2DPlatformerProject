@@ -19,7 +19,7 @@ public class TerrainController : MonoBehaviour
     [SerializeField] public Tile diamondTile;
     [SerializeField] public Tile hoverTile;
 
-    [SerializeField] public Tile lavaTile;
+    [SerializeField] public GameObject lavaPrefab;
 
     public int[,] terrainMap;
 

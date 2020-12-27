@@ -475,7 +475,7 @@ MonoBehaviour:
   goldTile: {fileID: 11400000, guid: ccc3f37afcf80405b86218a6deecfa5c, type: 2}
   diamondTile: {fileID: 11400000, guid: 6a11740118ee94784a528d804d31912f, type: 2}
   hoverTile: {fileID: 11400000, guid: 5777355acb4024cd7884e8098182ddd7, type: 2}
-  lavaTile: {fileID: 11400000, guid: 8cefc2229e71f4fceac843ddeda03695, type: 2}
+  lavaPrefab: {fileID: 0}
   lavaSourceBlocks: []
 --- !u!1 &823704204
 GameObject:
@@ -611,6 +611,75 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1001 &912365299
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6169764426943241953, guid: 531502d829f1c414f9e960b08de8afdc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169764426943241953, guid: 531502d829f1c414f9e960b08de8afdc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169764426943241953, guid: 531502d829f1c414f9e960b08de8afdc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169764426943241953, guid: 531502d829f1c414f9e960b08de8afdc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169764426943241953, guid: 531502d829f1c414f9e960b08de8afdc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169764426943241953, guid: 531502d829f1c414f9e960b08de8afdc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169764426943241953, guid: 531502d829f1c414f9e960b08de8afdc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169764426943241953, guid: 531502d829f1c414f9e960b08de8afdc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169764426943241953, guid: 531502d829f1c414f9e960b08de8afdc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169764426943241953, guid: 531502d829f1c414f9e960b08de8afdc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169764426943241953, guid: 531502d829f1c414f9e960b08de8afdc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169764426943241958, guid: 531502d829f1c414f9e960b08de8afdc,
+        type: 3}
+      propertyPath: m_Name
+      value: SpawnPoint
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 531502d829f1c414f9e960b08de8afdc, type: 3}
 --- !u!1 &1155027435
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,6 +797,75 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &1177156349
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2871809848512822834, guid: 53ec5ea21f8014a27a9aaf0ac041146a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.792202
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871809848512822834, guid: 53ec5ea21f8014a27a9aaf0ac041146a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.3170147
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871809848512822834, guid: 53ec5ea21f8014a27a9aaf0ac041146a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2897.928
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871809848512822834, guid: 53ec5ea21f8014a27a9aaf0ac041146a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871809848512822834, guid: 53ec5ea21f8014a27a9aaf0ac041146a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871809848512822834, guid: 53ec5ea21f8014a27a9aaf0ac041146a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871809848512822834, guid: 53ec5ea21f8014a27a9aaf0ac041146a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871809848512822834, guid: 53ec5ea21f8014a27a9aaf0ac041146a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871809848512822834, guid: 53ec5ea21f8014a27a9aaf0ac041146a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871809848512822834, guid: 53ec5ea21f8014a27a9aaf0ac041146a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871809848512822834, guid: 53ec5ea21f8014a27a9aaf0ac041146a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871809848512822835, guid: 53ec5ea21f8014a27a9aaf0ac041146a,
+        type: 3}
+      propertyPath: m_Name
+      value: LavaPrefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 53ec5ea21f8014a27a9aaf0ac041146a, type: 3}
 --- !u!1 &1195848455
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,7 +944,6 @@ GameObject:
   - component: {fileID: 1944886786}
   - component: {fileID: 1944886787}
   - component: {fileID: 1944886788}
-  - component: {fileID: 1944886789}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -845,7 +982,8 @@ MonoBehaviour:
   birthLimit: 3
   deathLimit: 2
   lifeCycles: 1
-  tileMapSize: {x: 120, y: 70, z: 0}
+  lavaSpawnPoint: {fileID: 6169764426943241958, guid: 531502d829f1c414f9e960b08de8afdc,
+    type: 3}
 --- !u!114 &1944886788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -867,21 +1005,8 @@ MonoBehaviour:
   goldTile: {fileID: 11400000, guid: ccc3f37afcf80405b86218a6deecfa5c, type: 2}
   diamondTile: {fileID: 11400000, guid: 6a11740118ee94784a528d804d31912f, type: 2}
   hoverTile: {fileID: 11400000, guid: 5777355acb4024cd7884e8098182ddd7, type: 2}
-  lavaTile: {fileID: 11400000, guid: 8cefc2229e71f4fceac843ddeda03695, type: 2}
+  lavaPrefab: {fileID: 0}
   lavaSourceBlocks: []
---- !u!114 &1944886789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1944886785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53d71442ff23948a383fd4c0270ce585, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrainController: {fileID: 1944886788}
 --- !u!1 &2070893810
 GameObject:
   m_ObjectHideFlags: 3

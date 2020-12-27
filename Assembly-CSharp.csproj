@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\LavaSpawner.cs" />
+    <Compile Include="Assets\LavaUnit.cs" />
     <Compile Include="Assets\Mining.cs" />
     <Compile Include="Assets\Scripts\MinerScripts\Collision.cs" />
     <Compile Include="Assets\Scripts\MinerScripts\Movement.cs" />

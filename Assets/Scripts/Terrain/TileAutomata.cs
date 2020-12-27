@@ -13,12 +13,14 @@ public class TileAutomata : MonoBehaviour
     [Range(0, 8)] [SerializeField] private int deathLimit;
     [Range(1, 10)] [SerializeField] private int lifeCycles;
 
-    //[Range(0, 100)] [SerializeField] private int tileNumber; 
-
-    [SerializeField] private Vector3Int tileMapSize;
-
     private int width;
     private int height;
+
+    [SerializeField] private GameObject lavaSpawnPoint;
+
+    private void Start()
+    {
+    }
 
     // Update is called once per frame
     void Update()
@@ -85,18 +87,33 @@ public class TileAutomata : MonoBehaviour
 
     private void PlaceBottomTile(int row, int col)
     {
-        Tile tile;
+        Tile tile = terrainController.bottomTile;
         int lavaChance = Random.Range(0, 1000);
-
         RangeInt lavaRange = new RangeInt(0, 1);
 
-        tile = terrainController.bottomTile;
         if (lavaChance >= lavaRange.start && lavaChance <= lavaRange.end)
         {
-            tile = terrainController.lavaTile;
-            terrainController.lavaSourceBlocks.Add(new Vector3Int(-row + width / 2, -col + height / 2, 0));
+            InstantiateLavaSpawnPoint(new Vector3Int(-row + width / 2, -col + height / 2, 0));
         }
-        terrainController.bottomMap.SetTile(new Vector3Int(-row + width / 2, -col + height / 2, 0), tile);
+        else
+        {
+            terrainController.bottomMap.SetTile(
+                new Vector3Int(
+                    -row + width / 2,
+                    -col + height / 2,
+                    0),tile);
+        }
+    }
+
+    private void InstantiateLavaSpawnPoint(Vector3Int spawnPosition)
+    {
+        Instantiate(lavaSpawnPoint,
+            new Vector3(
+                spawnPosition.x,
+                spawnPosition.y,
+                spawnPosition.z
+                ),
+            Quaternion.identity);
     }
 
     private void ClearMap(bool complete)

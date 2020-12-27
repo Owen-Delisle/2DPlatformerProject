@@ -44,7 +44,7 @@ public class Mining : MonoBehaviour
         topTile = playerController.terrainController.topTile;
         bottomTile = playerController.terrainController.bottomTile;
 
-        lavaTile = playerController.terrainController.lavaTile;
+        //lavaTile = playerController.terrainController.lavaTile;
     }
 
     // Update is called once per frame
@@ -132,11 +132,9 @@ public class Mining : MonoBehaviour
     {
         if (playerController.isPlacePressed == true)
         {
-            if (bottomMap.GetTile(mouseBottomCellPosition).name == lavaTile.name)
-                bottomMap.SetTile(mouseBottomCellPosition, bottomTile);
             
-            if (topMap.GetTile(mouseBottomCellPosition) == null)
-                topMap.SetTile(mouseBottomCellPosition, topTile);
+        if (topMap.GetTile(mouseBottomCellPosition) == null)
+            topMap.SetTile(mouseBottomCellPosition, topTile);
 
             playerController.isPlacePressed = false;
         }
